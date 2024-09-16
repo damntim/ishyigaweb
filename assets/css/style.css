@@ -82,9 +82,9 @@ font-size: small;
     background:rgba(248,248,248,.8);
           margin-right: 300px;
       }
-      /* .mheader{
-          background-image: url(../images/uk-eu-spotlight-upd.jpg);
-      } */
+      .mheader{
+         font-size: xx-small;
+      }
 [data-slides] {
 	background-image: url(../images/b1.jpg); /* Default image. */
 	transition: background-image 1s linear;
@@ -449,7 +449,7 @@ body {
 h3 {
   font-size: 2.5rem; /* Increase font size */
   font-weight: bold; /* Make the text bold */
-  color: #333; /* Dark color for better visibility */
+
   text-align: center; /* Center-align the text */
   margin-bottom: 20px; /* Add spacing below the heading */
   text-transform: uppercase; /* Make the text uppercase */
@@ -462,6 +462,7 @@ h3 {
 
 .row {
   margin-bottom: 20px;
+  /* font-size: xx-small; */
 }
 
 /* Card styling */
@@ -481,9 +482,14 @@ h3 {
 
 /* Card image styling */
 .card-img-top {
-  height: 200px;
+  height: 300px;
   object-fit: cover;
+  object-position: top; /* Focuses on the top part of the image */
+  filter: contrast(1.1) saturate(1.2); /* Enhances image quality */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a soft shadow for depth */
+  border-radius: 10px; /* Slightly rounds the corners */
 }
+
 
 /* Card title */
 .card-title {
@@ -607,5 +613,167 @@ hr {
 @media (max-width: 576px) {
   .card-images img {
       max-width: 60px;
+  }
+}
+
+.container4.why-choose-us {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 20px auto;
+}
+
+.card-business, .card-skills, .card-partners {
+  flex: 0 1 32%;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  text-align: center;
+}
+
+.card-business:hover, .card-skills:hover, .card-partners:hover {
+  transform: translateY(-10px);
+}
+
+.card-content h3, .card-content h2 {
+  color: #343a40;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.card-content p {
+  color: #6c757d;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* General container styling */
+.footer.contactus {
+  background-color: #f7f9fc;
+  padding: 40px 0;
+  color: #333;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 28px;
+  color: #007bff; /* Light blue color for heading */
+}
+
+/* Form styling */
+.well {
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #e3e3e3;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  padding: 10px;
+  font-size: 16px;
+  color: #495057;
+  background-color: #ffffff;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+}
+
+/* Input group styling */
+.input-group-addon {
+  background-color: #e9ecef;
+  border-radius: 5px 0 0 5px;
+  border-color: #ced4da;
+}
+
+.glyphicon-envelope {
+  color: #007bff;
+}
+
+select.form-control {
+  background-color: #f7f9fc;
+}
+
+/* Button styling */
+#btnContactUs {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+#btnContactUs:hover {
+  background-color: #0056b3;
+}
+
+/* Social media buttons styling */
+.social {
+  margin-top: 20px;
+}
+
+.fb-like, .twitter-follow-button {
+  margin-right: 15px;
+}
+
+.social a {
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Office information styling */
+legend {
+  font-size: 20px;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+address, p {
+  font-size: 16px;
+  color: #333;
+}
+
+address a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+address a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .footer .col-md-8, .footer .col-md-4 {
+      text-align: center;
+  }
+
+  .footer .row {
+      display: flex;
+      flex-direction: column;
   }
 }
